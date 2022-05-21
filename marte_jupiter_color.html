@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tu peso en un lugar donde pesas menos</title>
+    <style type="text/css">
+    body
+    /*div*/
+    {
+      background-image: url(https://www.mundo-geo.es/uploads/s1/95/27/49/2/recientemente-pluton-dejo-de-ser-considerado-un-planeta-del-sistema-solar.jpeg);
+      background-size: cover;
+      /*background-repeat: no-repeat; ya no hace falta porque tiene el size: cover*/
+      background-color: #27241F;
+      color: white;
+      font-family: fantasy;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Tu peso en otro planeta</h1>
+    <p>En la tierra pesas distinto que en Marte o en Jupiter</p>
+    <script>
+      var usuario = prompt("Cual es tu peso?");
+      var planeta = parseInt(prompt("Elige tu planeta\n1 es Marte, 2 es Júpiter"));
+      var peso = parseInt(usuario);
+      var g_tierra = 9.8;
+      var g_marte = 3.7;
+      var g_jupiter = 24.8;
+      // se puede declarar una variable sin valor para ilustrar//
+      // \n para salto de línea ==para comparar y = para asignar
+      var peso_final;
+      var nombre;
+      if(planeta == 1)
+      {
+        peso_final = peso * g_marte / g_tierra;
+        nombre = "Marte";
+      }
+      else if(planeta == 2)
+      {
+        peso_final = peso * g_jupiter / g_tierra;
+        nombre = "Júpiter";
+      }
+      else
+      {
+        peso_final = 1000000;
+        nombre = "Kripton";
+      }
+      //else conecat condiciones
+
+      // para que no salgan tantos decimales parseInt//
+      //parseInt convierte las variables de tipo flotante a entero//
+      // cuando estamos asigando 1º ocurre lo de la derecha//
+      //1º la operación ocurre y luego se le asigna la variable//
+      peso_final = parseInt(peso_final);
+      document.write("Tu peso en " + nombre + " es <strong>" + peso_final + " kilos</strong>");
+    </script>
+  </body>
+<html/>
