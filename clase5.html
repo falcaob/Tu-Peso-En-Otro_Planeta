@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <!--Campo de formularios-->
+    <form>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre">
+        <br>
+        <br>
+
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos">
+
+        <br>
+        <br>
+        <select name="coches" size="4" multiple="multiple">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option selected="salected" value="audi">Audi</option>
+        </select>
+
+        <br>
+        <br>
+        <input type="submit" value="Enviar">
+
+        <!--caja texto-->
+        <textarea name="message"rows="3"cols="30">Escribe aquí...</textarea>
+        <br>
+        <br>
+        <!--subir archivo-->
+        <input name="myFile" type="file"></inputname>
+        <br>
+        <br>
+
+        
+        <p>lista de opciones</p>
+        <input name="navegadores" list="navegadores">
+        <datalist id="navegadores">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+
+        <input type="submit" value="Enviar">
+        <br>
+        <br>
+
+        <!-- campo de texto password -->
+        <label for="psw">Password:</label>
+        <input type="password" name="psw">
+
+        <input type="submit" value="Enviar">
+        <br>
+        <br>
+
+        <!-- botón de reset -->
+        <input type="reset">
+
+        <br>
+        <br>
+
+        <!-- campo de formulario radio -->
+        <input type="radio" name="genero" value="hombre">
+        <label for="genero">Hombre</label>
+
+        <input type="radio" name="genero" value="mujer">
+        <label for="genero">Mujer</label>
+
+        <input type="radio" name="genero" value="otro">
+        <label for="genero">Otro</label>
+
+        <!--checked="checked" aparezca marcado-->
+        <br>
+        <br>
+
+        <!-- campo de formulario de tipo checkbox -->
+        <input type="checkbox" id="vehiculo" value="bici">
+        <label for="vehiculo">Tengo una bici</label>
+
+        <input type="checkbox" name="vehiculo" value="coche">
+        <label for="vehiculo">Tengo un coche</label>
+
+        <br>
+        <br>
+
+        <!-- campo color -->
+        <label for="favcolor">Color:</label>
+        <input type="color" name="favcolor">
+
+        <br>
+        <br>
+
+        <!-- campo fecha -->
+        <label for="bday1"> Introduce primera fecha:</label>
+        <input type="date" name="bday1" max="1979-12-31">
+      
+        <label for="bday2">Introduce segunda fecha:</label>
+        <input type="date" name="bday2" value="2000-01-02">
+
+        <br>
+        <br>
+
+        <!-- campo fecha y hora -->
+        <label for="bdaytime">Introduce fecha y hora:</label>
+        <input type="datetime-local" name="bdaytime">
+
+        <br>
+        <br>
+
+        <!-- campo email, IMPORTANTE VALIZACIÓN
+        validacion en frontend no obligatoria,
+        en backend sí para no hackeo-->
+        <label for="correo">Email</label>
+        <input type="email" name="correo">
+        <p>*Importante validación del email en backend</p>
+
+        <br>
+
+        <!-- campo numérico -->
+        <label for="edad">Edad</label>
+        <input type="number" name="edad" min="0" max="120">
+
+        <br>
+        <br>
+
+        <!-- tipo rango -->
+        <input type="range" name="points" min="0" max="10">
+
+        <br>
+        <br>
+
+        <!-- campo hora -->
+        <label for="usr_time">Hora</label>:
+        <input type="time" name="usr_time">
+
+        <br>
+        <br>
+
+        <!-- campo de tipo desabilitado -->
+        <label for="nombre">Nombre</label>:
+        <input type="text" name="nombre" value="None" disabled="disabled">
+        <!--disabled="disabled", para que no se pueda seleccionar-->
+
+        <br>
+        <br>
+
+        <!--focus-->
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos" autofocus="autofocus">
+        </inputtype>
+
+        <br>
+        <br>
+
+        <!-- campo requerido -->
+        <label for="nombre">Nombre (*)</label>:
+        <input type="text" name="nombre" required="required">
+
+        <br>
+        <br>
+
+        <!-- campo con atributo placeholder -->
+        <label for="nombre">Nombre</label>:
+        <input type="text" name="nombre" placeholder="Escriba su nombre aquí">
+
+        
+
+    </form>
+
+</body>
+</html>
